@@ -101,5 +101,4 @@ plot(t,Epm);
 Output Waveform
 <img width="736" height="594" alt="image" src="https://github.com/user-attachments/assets/530ae33f-1f34-4331-85d5-42cd62012e66" />
 
-RESULT:
-Thus the amplitude modulation and demodulation is experimentally done and the output is verified.
+RESULT:Thus,the simulation for the phase modulation (PM) signal is executed in SCILAB and the output id verified 
