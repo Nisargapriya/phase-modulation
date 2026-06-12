@@ -2,7 +2,7 @@
 
 
 AIM:
-
+To Simulate the phase modulation (PM) Signal.
 
 
 EQUIPMENTS REQUIRED
@@ -12,44 +12,104 @@ EQUIPMENTS REQUIRED
 •	SCI LAB
 
 THEORY:
+Phase Modulation (PM) is an angle modulation technique in which the phase of the carrier signal is varied in accordance with the instantaneous amplitude of the modulating signal while the carrier amplitude remains constant.
 
-Modulation can be defined as the process by which the characteristics of carrier wave are varied in accordance with the modulating wave (signal). Modulation is performed in a transmitter by a circuit called a modulator.
-Need for modulation is as follows:
-•	Avoid mixing of signals
-•	Reduction in antenna height
-•	long distance communication
-•	Multiplexing
-•	Improve the quality of reception
-•	Ease of radiation.
-Amplitude Modulation is the process of changing the amplitude of a relatively high frequency carrier signal in proportion with the instantaneous value of the modulating signal. The output waveform contains all the frequencies that make up the AM signal and is used to transport the information through the system. Therefore the shape of the modulated wave is called the AM envelope. With no modulating signal the output waveform is simply the carrier signal. Coefficient of modulation is a term used to describe the amount of amplitude change present in an AM waveform. There are three degrees of modulation available based on value of modulation index.
-1)	Under modulation :	m<1, Em < Ec
-2)	Critical modulation: m-1, Em = Ec
-3)	Over modulation:	m>1, Em > Ec
+The phase-modulated signal is given by:
 
+e
+PM
+	​
 
+=A
+c
+	​
 
-Note: Keep all the switch faults in off position
+cos(ω
+c
+	​
+
+t+βsinω
+m
+	​
+
+t)
+
+where:
+
+A
+c
+	​
+
+ = Carrier amplitude
+ω
+c
+	​
+
+ = Carrier angular frequency
+ω
+m
+	​
+
+ = Message angular frequency
+β = Phase modulation index
+
+In PM, the phase deviation of the carrier is directly proportional to the amplitude of the message signal.
 
 Algorithm
+1. Start the program.
+
+2. Define the message signal amplitude (Am), message frequency (fm),
+   carrier amplitude (Ac), carrier frequency (fc), sampling frequency (fs),
+   and phase modulation index (β).
+
+3. Generate the time vector:
+      t = 0 : 1/fs : 2/fm
+
+4. Generate the message signal:
+      em = Am × cos(2πfmt)
+
+5. Plot the message signal.
+
+6. Generate the carrier signal:
+      ec = Ac × cos(2πfct)
+
+7. Plot the carrier signal.
+
+8. Generate the phase modulated signal:
+      epm = Ac × cos(2πfct + β sin(2πfmt))
+
+9. Plot the PM signal.
+
+10. Observe the message, carrier, and PM waveforms.
+
+11. Stop the program.
 
 Program
 ```
-Am=7.1;
-fm=1444;
-fc=14440;
-fs=144400;
-t=0:1/fs:2/fm;
-Ac=12.07;
+Am=12.1;
+fm=1632;
+Ac=18.15;
+fc=16320;
+fs=163200;
 
-em=Am*cos(2*3.14*fm*t);
-subplot(3,1,1);
-plot(t,em);
-ec=Ac*cos(2*3.14*fc*t);
-subplot(3,1,2);
-plot(t,ec);
-eam=(Ac+em).*cos(2*3.14*fc*t);
-subplot(3,1,3);
-plot(t,eam);
+t=0:1/fs:2/fm;
+B=2.7;
+
+Em=Am*cos(2*3.14*fm*t);
+subplot(4,1,1);
+plot(t,Em);
+
+Ec=Ac*cos(2*3.14*fc*t);
+subplot(4,1,2);
+plot(t,Ec);
+
+Efm=Ac*cos((2*3.14*fc*t)+B*sin(2*3.14*fm*t));
+subplot(4,1,3);
+plot(t,Efm);
+
+Epm=Ac*cos(2*3.14*fc*t-B*cos(2*3.14*fm*t));
+subplot(4,1,4);
+plot(t,Epm);
 
 ```
 MODEL GRAPH
