@@ -12,7 +12,7 @@ EQUIPMENTS REQUIRED
 •	SCI LAB
 
 THEORY:
-THEORY
+
 
 Phase Modulation (PM) is a type of angle modulation in which the phase of the carrier signal is varied according to the instantaneous amplitude of the modulating signal while keeping the carrier amplitude constant.
 
