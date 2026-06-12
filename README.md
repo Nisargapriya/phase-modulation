@@ -12,49 +12,33 @@ EQUIPMENTS REQUIRED
 •	SCI LAB
 
 THEORY:
-Phase Modulation (PM) is an angle modulation technique in which the phase of the carrier signal is varied in accordance with the instantaneous amplitude of the modulating signal while the carrier amplitude remains constant.
+THEORY
 
-The phase-modulated signal is given by:
+Phase Modulation (PM) is a type of angle modulation in which the phase of the carrier signal is varied according to the instantaneous amplitude of the modulating signal while keeping the carrier amplitude constant.
 
-e
-PM
-	​
+In phase modulation, the amount of phase shift introduced in the carrier signal is directly proportional to the amplitude of the message signal. PM is widely used in digital communication systems because of its improved noise immunity and efficient bandwidth utilization.
 
-=A
-c
-	​
+The message signal is given by:
 
-cos(ω
-c
-	​
+em = Am cos(2πfmt)
 
-t+βsinω
-m
-	​
+The carrier signal is given by:
 
-t)
+ec = Ac cos(2πfct)
 
-where:
+The phase modulated signal is given by:
 
-A
-c
-	​
+epm = Ac cos(2πfct + β sin(2πfmt))
 
- = Carrier amplitude
-ω
-c
-	​
+where,
 
- = Carrier angular frequency
-ω
-m
-	​
-
- = Message angular frequency
+Am = Amplitude of the message signal
+Ac = Amplitude of the carrier signal
+fm = Frequency of the message signal
+fc = Frequency of the carrier signal
 β = Phase modulation index
 
-In PM, the phase deviation of the carrier is directly proportional to the amplitude of the message signal.
-
+Thus, in Phase Modulation, the phase of the carrier wave changes in accordance with the message signal while its amplitude remains constant.
 Algorithm
 1. Start the program.
 
