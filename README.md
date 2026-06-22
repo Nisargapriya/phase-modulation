@@ -76,26 +76,20 @@ fm=1632;
 Ac=18.15;
 fc=16320;
 fs=163200;
-
 t=0:1/fs:2/fm;
 B=2.7;
-
-Em=Am*cos(2*3.14*fm*t);
+em=Am*cos(2*3.14*fm*t);
 subplot(4,1,1);
-plot(t,Em);
-
-Ec=Ac*cos(2*3.14*fc*t);
+plot(t,em);
+ec=Ac*cos(2*3.14*fc*t);
 subplot(4,1,2);
-plot(t,Ec);
-
-Efm=Ac*cos((2*3.14*fc*t)+B*sin(2*3.14*fm*t));
+plot(t,ec);
+efm=Ac*cos((2*3.14*fc*t)+B*sin(2*3.14*fm*t)); 
 subplot(4,1,3);
-plot(t,Efm);
-
-Epm=Ac*cos(2*3.14*fc*t-B*cos(2*3.14*fm*t));
+plot(t,efm);
+epm=Ac*cos((2*3.14*fc*t)+B*cos(2*3.14*fm*t));
 subplot(4,1,4);
-plot(t,Epm);
-
+plot(t,epm);
 ```
 
 Output Waveform
